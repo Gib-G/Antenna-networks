@@ -21,5 +21,5 @@ In radio communications, skywaves refer to electromagnetic waves that are reflec
 
 <figure>
     <img src="Illustrations/electron_density.png" alt="Electron density with respect to altitude within the ionosphere">
-    <figcaption>Electron density with respect to altitude within the ionosphere</figcaption>
+    <figcaption>Figure 1: Electron density with respect to altitude within the ionosphere</figcaption>
 </figure>
