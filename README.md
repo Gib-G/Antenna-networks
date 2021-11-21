@@ -23,3 +23,29 @@ In radio communications, skywaves refer to electromagnetic waves that are reflec
     <img src="Illustrations/electron_density.png" alt="Electron density with respect to altitude within the ionosphere">
     <figcaption>Figure 1: Electron density with respect to altitude within the ionosphere</figcaption>
 </figure>
+
+Skywaves can be particularly useful for long-distance communications as they can reach points beyond the horizon as defined at the location of their emission. They are mainly used in the shortwave frequency band.
+
+We want to compute the paths of skywaves within the ionosphere depending on their angle of emission, and frequency for the most part. Using this data, we can then place antennas accordingly for specific long-distance communication needs.
+
+Using reasonable approximations, we can shift the problem into the field of geometrical optics. As the electron density varies within the ionosphere, so does the refractive index of the air. This can be visualized on the following figure:
+
+<figure>
+    <img src="Illustrations/refractive_index.png" alt="Refractive index of the air with respect to altitude within the ionosphere">
+    <figcaption>Figure 2: Refractive index of the air with respect to altitude within the ionosphere</figcaption>
+</figure>
+
+The script subdivides the ionosphere into multiple layers of fixed refractive index, throws an electromagnetic ray (can be thought as the wave's Poynting vector) of an adjustable frequency from ground level to the ionosphere with an adjustable angle of incidence. The trajectory of the ray is defined using Snell's law each time the ray passes from one subdivision of the ionosphere to the next.
+
+Using this method, we can retrieve approximated trajectories like the following (the horizontal axis represents horizontal distance from emission point; the vertical axis represents vertical disatnce from emission point).
+
+<figure>
+    <img src="Illustrations/reflected.png" alt="Reflected skywave">
+    <figcaption>Figure 3: Reflected skywave</figcaption>
+</figure>
+
+<figure>
+    <img src="Illustrations/not_reflected.png" alt="Skywave is not reflected back to Earth">
+    <figcaption>Figure 4: Skywave is not reflected back to Earth</figcaption>
+</figure>
+
