@@ -26,7 +26,7 @@ The different parts of the study are briefly explained below. Those explanations
 
 # Part 1: Skywaves
 
-In radio communications, skywaves refer to electromagnetic waves that are reflected or refracted back to Earth by the ionosphere. This deflection is due to the fact that the ionosphere is electrically charged. The electron density within this layer of the atmosphere varies with altitude, as shown in the following figure:
+In radio communications, skywaves refer to electromagnetic waves that are refracted and reflected back to Earth by the ionosphere. This deflection is due to the fact that the ionosphere is electrically charged. The electron density within this layer of the atmosphere varies with altitude, as shown in the following figure:
 
 <figure>
     <img src="Illustrations/electron_density.png" alt="Electron density with respect to altitude within the ionosphere">
