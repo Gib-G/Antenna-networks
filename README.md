@@ -85,3 +85,55 @@ You can have a look at the slides of the presentation for greater details on the
 
 # Part 3: Antenna layout in cellular networks
 
+This part focuses on cellular networks. The main questions I used for this part were the following:
+
+<ul>
+    <li>What is the best way to organize the layout of antennas inside a cellular network depending on their designs?</li>
+    <li>Given a fixed layout of antennas, which antenna should a receiver connect to (the power of the signal was the main criterion used)?</li>
+</ul>
+
+In a first approach, I simply considered that a receiver should connnect to the closest (with regard to the euclidean distance) antenna in the network. This does not take the design of the antennas into account: the antennas are considered isotropic.
+
+The problem could thus be rephrased like so: given a set of seed points (the antennas) in a plane, find the tessellation that subdivides the plane into regions, where each region contains only one seed point (the region's seed point), and all points in a region are closer to the region's seed point than to any other seed point on the plane.
+The solution to this problem consists in computing the <a href="https://en.wikipedia.org/wiki/Voronoi_diagram">Voronoi diagram</a> associated with the set of seed points representing the antennas of the cellular network.
+
+To do so, I implemented <a href="https://en.wikipedia.org/wiki/Fortune%27s_algorithm">Fortune's algorithm</a> in the script. Detailed explanations of the different parts of the algorithm can be found in the comments of the script code.
+
+Here is an example of a Voronoi diagram computed by the script and respresenting the different areas of influence of antennas (the seed points in red):
+
+<figure>
+    <img src="Illustrations/voronoi.png" alt="Cellular map of a network based on a Voronoi tessellation">
+    <figcaption>Figure 8: Cellular map of a network based on a Voronoi tessellation</figcaption>
+</figure><br><br><br>
+
+The next step was to produce cellular maps that take into account the radiation patterns of the antennas used within the network. I could thus reuse some elements of part 2.
+
+<strong>Note: The part of the script that is responsible for computing and plotting such maps uses OpenCV.</strong>
+
+As the algorithm I designed to compute those maps is computationally expensive, I could only test it for small networks comprised of 2 antennas with different radiation patterns.
+
+The first antenna I chose is a Yagi-Uda antenna whose radiation pattern is represented by a blue line in the layout figures shown below. In the cellular maps, blue areas receive a greater power from this Yagi-Uda antenna than from the other antenna.
+
+The second antenna has a 3-beam radiation pattern represented by a red line in the layout figures shown below. In the cellular maps, red areas receive a greater power from this antenna than from the Yagi-Uda.
+
+Here are some results given by the script:
+
+<figure>
+    <img src="Illustrations/layout_1.png" alt="First test layout for the antennas">
+    <figcaption>Figure 9: First test layout for the antennas</figcaption>
+</figure><br><br><br>
+
+<figure>
+    <img src="Illustrations/map_1.png" alt="Cellular map for the first test layout">
+    <figcaption>Figure 10: Cellular map for the first test layout</figcaption>
+</figure><br><br><br>
+
+<figure>
+    <img src="Illustrations/layout_2.png" alt="Second test layout for the antennas">
+    <figcaption>Figure 11: Second test layout for the antennas</figcaption>
+</figure><br><br><br>
+
+<figure>
+    <img src="Illustrations/map_2.png" alt="Cellular map for the second test layout">
+    <figcaption>Figure 12: Cellular map for the second test layout</figcaption>
+</figure><br><br><br>
