@@ -22,7 +22,7 @@ In radio communications, skywaves refer to electromagnetic waves that are reflec
 <figure>
     <img src="Illustrations/electron_density.png" alt="Electron density with respect to altitude within the ionosphere">
     <figcaption>Figure 1: Electron density with respect to altitude within the ionosphere</figcaption>
-</figure>
+</figure><br><br><br>
 
 Skywaves can be particularly useful for long-distance communications as they can reach points beyond the horizon as defined at the location of their emission. They are mainly used in the shortwave frequency band.
 
@@ -33,7 +33,7 @@ Using reasonable approximations, we can shift the problem into the field of geom
 <figure>
     <img src="Illustrations/refractive_index.png" alt="Refractive index of the air with respect to altitude within the ionosphere">
     <figcaption>Figure 2: Refractive index of the air with respect to altitude within the ionosphere</figcaption>
-</figure>
+</figure><br><br><br>
 
 The script subdivides the ionosphere into multiple layers of fixed refractive index, throws an electromagnetic ray (can be thought as the wave's Poynting vector) of an adjustable frequency from ground level to the ionosphere with an adjustable angle of incidence. The trajectory of the ray is defined using Snell's law each time the ray passes from one subdivision of the ionosphere to the next.
 
@@ -42,10 +42,10 @@ Using this method, we can retrieve approximated trajectories like the following 
 <figure>
     <img src="Illustrations/reflected.png" alt="Reflected skywave">
     <figcaption>Figure 3: Reflected skywave</figcaption>
-</figure>
+</figure><br><br><br>
 
 <figure>
     <img src="Illustrations/not_reflected.png" alt="Skywave is not reflected back to Earth">
     <figcaption>Figure 4: Skywave is not reflected back to Earth</figcaption>
-</figure>
+</figure><br><br><br>
 
