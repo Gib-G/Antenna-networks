@@ -49,3 +49,4 @@ Using this method, we can retrieve approximated trajectories like the following 
     <figcaption>Figure 4: Skywave is not reflected back to Earth</figcaption>
 </figure><br><br><br>
 
+# Part 2: 
