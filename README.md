@@ -46,7 +46,7 @@ Using reasonable approximations, we can shift the problem into the field of geom
 
 The script subdivides the ionosphere into multiple layers of fixed refractive index, throws an electromagnetic ray (can be thought as the wave's Poynting vector) of an adjustable frequency from ground level to the ionosphere with an adjustable angle of incidence. The trajectory of the ray is defined using Snell's law each time the ray passes from one subdivision of the ionosphere to the next.
 
-Using this method, we can retrieve approximated trajectories like the following (the horizontal axis represents horizontal distance from emission point; the vertical axis represents vertical disatnce from emission point).
+Using this method, we can retrieve approximated trajectories like the following (the horizontal axis represents the horizontal distance to the emission point; the vertical axis represents the vertical distance to the emission point).
 
 <figure>
     <img src="Illustrations/reflected.png" alt="Reflected skywave">
